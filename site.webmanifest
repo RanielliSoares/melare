@@ -1,0 +1,14 @@
+{
+  "name": "MELARE Construção Civil",
+  "short_name": "MELARE",
+  "description": "Construção civil em Sorocaba e região.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0B0D",
+  "theme_color": "#0B0B0D",
+  "lang": "pt-BR",
+  "icons": [
+    { "src": "assets/img/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/img/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MELARE Construção Civil | Alto Padrão em Sorocaba e Região</title>
+<!-- Google Fonts: Inter & Hanken Grotesk -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with configuration -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-highest": "#353437",
+            "accent-gold-glow": "rgba(212, 175, 55, 0.15)",
+            "primary-fixed": "#ffe088",
+            "on-secondary-fixed-variant": "#604100",
+            "error-container": "#93000a",
+            "text-muted": "#86868B",
+            "on-secondary-container": "#3a2600",
+            "surface-dim": "#131315",
+            "on-secondary-fixed": "#281900",
+            "accent-gold-rich": "#E5A93C",
+            "secondary-fixed-dim": "#fabc4d",
+            "on-primary-fixed-variant": "#574500",
+            "surface-container-high": "#2a2a2c",
+            "on-error-container": "#ffdad6",
+            "primary-fixed-dim": "#e9c349",
+            "tertiary-fixed-dim": "#e1c46e",
+            "on-primary-fixed": "#241a00",
+            "inverse-primary": "#735c00",
+            "on-tertiary-container": "#554300",
+            "surface-canvas": "#0B0B0D",
+            "background": "#131315",
+            "tertiary": "#eacc75",
+            "surface-elevated": "#121316",
+            "surface-container-low": "#1c1b1d",
+            "on-error": "#690005",
+            "outline": "#99907c",
+            "on-tertiary": "#3c2f00",
+            "on-surface-variant": "#d0c5af",
+            "tertiary-fixed": "#ffe087",
+            "secondary-container": "#bd8718",
+            "on-primary-container": "#554300",
+            "on-secondary": "#432c00",
+            "surface-bright": "#39393b",
+            "accent-gold-core": "#D4AF37",
+            "surface-container-lowest": "#0e0e10",
+            "text-secondary": "#A1A1A6",
+            "accent-gold-champagne": "#F5D77F",
+            "outline-variant": "#4d4635",
+            "tertiary-container": "#cdb15d",
+            "hairline-subtle": "rgba(255, 255, 255, 0.08)",
+            "surface-container": "#201f21",
+            "secondary": "#fabc4d",
+            "surface": "#131315",
+            "text-primary": "#F5F5F7",
+            "secondary-fixed": "#ffdead",
+            "surface-variant": "#353437",
+            "on-primary": "#3c2f00",
+            "primary": "#f2ca50",
+            "primary-container": "#d4af37",
+            "inverse-surface": "#e5e1e4",
+            "inverse-on-surface": "#313032",
+            "error": "#ffb4ab",
+            "on-tertiary-fixed-variant": "#574500",
+            "surface-tint": "#e9c349",
+            "on-tertiary-fixed": "#231b00",
+            "surface-overlay": "#181A1E",
+            "on-background": "#e5e1e4",
+            "hairline-border": "#26262B",
+            "on-surface": "#e5e1e4"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter-mobile": "1rem",
+            "space-2xl": "4rem",
+            "space-xl": "2.5rem",
+            "space-4xl": "9rem",
+            "space-3xl": "6rem",
+            "margin": "4rem",
+            "space-xs": "0.5rem",
+            "space-lg": "1.5rem",
+            "margin-tablet": "2rem",
+            "space-md": "1rem",
+            "space-2xs": "0.25rem",
+            "gutter": "1.5rem",
+            "space-sm": "0.75rem",
+            "margin-mobile": "1.25rem"
+          },
+          "fontFamily": {
+            "display-hero-mobile": ["Hanken Grotesk"],
+            "headline-xl-mobile": ["Hanken Grotesk"],
+            "label-md": ["Inter"],
+            "headline-md": ["Hanken Grotesk"],
+            "headline-lg-mobile": ["Hanken Grotesk"],
+            "body-sm": ["Inter"],
+            "headline-lg": ["Hanken Grotesk"],
+            "body-lg": ["Inter"],
+            "label-caps": ["Inter"],
+            "title-lg": ["Inter"],
+            "display-hero": ["Hanken Grotesk"],
+            "headline-sm": ["Hanken Grotesk"],
+            "headline-xl": ["Hanken Grotesk"],
+            "body-md": ["Inter"]
+          },
+          "fontSize": {
+            "display-hero-mobile": ["44px", { "lineHeight": "50px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+            "headline-xl-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "500" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "400" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" }],
+            "title-lg": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "display-hero": ["80px", { "lineHeight": "88px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "headline-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.025em", "fontWeight": "600" }],
+            "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FFF6D6 0%, #D4AF37 60%, #AA820A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .editorial-glow {
+      box-shadow: 0 0 50px -15px rgba(212, 175, 55, 0.18), inset 0 1px 0 rgba(245, 215, 127, 0.15);
+    }
+    .hairline-card {
+      border: 1px solid #26262B;
+      transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hairline-card:hover {
+      border-color: rgba(212, 175, 55, 0.4);
+      box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.7), 0 0 28px -6px rgba(212, 175, 55, 0.12);
+    }
+  </style>
+</head>
+<body class="bg-surface-canvas text-text-primary antialiased selection:bg-accent-gold-core selection:text-surface-canvas overflow-x-hidden">
+<!-- ==================== SHARED COMPONENT: TopNavBar ==================== -->
+<header class="docked full-width top-0 sticky z-50 bg-surface-elevated/70 dark:bg-surface-elevated/70 backdrop-blur-md border-b border-hairline-border dark:border-hairline-border shadow-sm backdrop-blur-xl">
+<div class="flex justify-between items-center w-full px-6 md:px-space-xl max-w-7xl mx-auto h-20">
+<!-- Brand Logo Anchor -->
+<a class="flex items-center gap-3 group active:scale-[0.98] transition-transform duration-150" href="#">
+<div class="w-10 h-10 rounded-lg overflow-hidden border border-hairline-border bg-surface-container-lowest flex items-center justify-center p-1 group-hover:border-accent-gold-core transition-colors">
+<img alt="MELARE Construção Civil" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WnZ9tCVQ2wU1zuMP4DzErghiUBW3YDPuRxLxtHx0gZLwEPBeKrDuJhzJOg3VctKrA2IYoDEnC7-zhHJfwvIvYZ62yHEcbAyPMTD38LsKrPS6cvi1gWazC-d1SEcs2Dy8h-xl1n1WCiT2r_uIsRpu7Z-eQo9O65Q_ijVFWwPYaiaTdAQdbkR3Yd4CiVdXbyXo2tGB5pJt-l2sJ7VIlnir-J2UiwUJx6JuvBAUUmkEg"/>
+</div>
+<div class="flex flex-col">
+<span class="text-title-lg font-headline-sm font-bold tracking-tight text-text-primary dark:text-text-primary group-hover:text-primary transition-colors">MELARE</span>
+<span class="text-label-caps font-label-caps text-accent-gold-champagne tracking-widest uppercase">Construção Civil</span>
+</div>
+</a>
+<!-- Desktop Navigation Links (Strict hierarchy & casing preserved) -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-text-secondary dark:text-text-secondary font-medium transition-colors hover:text-primary dark:hover:text-primary text-body-md font-body-md" href="#empresa">Empresa</a>
+<a class="text-primary dark:text-primary font-semibold hover:text-primary dark:hover:text-primary text-body-md font-body-md" href="#servicos">Serviços</a>
+<a class="text-text-secondary dark:text-text-secondary font-medium transition-colors hover:text-primary dark:hover:text-primary text-body-md font-body-md" href="#etapas">Etapas</a>
+<a class="text-text-secondary dark:text-text-secondary font-medium transition-colors hover:text-primary dark:hover:text-primary text-body-md font-body-md" href="#diferenciais">Diferenciais</a>
+<a class="text-text-secondary dark:text-text-secondary font-medium transition-colors hover:text-primary dark:hover:text-primary text-body-md font-body-md" href="#contato">Contato</a>
+</nav>
+<!-- Trailing Primary Action -->
+<div class="flex items-center gap-4">
+<a class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-accent-gold-core text-surface-canvas font-label-md text-label-md font-semibold hover:bg-accent-gold-rich hover:shadow-[0_0_24px_rgba(212,175,55,0.35)] active:scale-[0.98] transition-all duration-200" href="https://wa.me/5515991718631?text=Olá%2C%20vim%20pelo%20site%20da%20MELARE%20e%20gostaria%20de%20solicitar%20um%20orçamento." rel="noopener noreferrer" target="_blank">
+          Solicitar Orçamento
+        </a>
+<a aria-label="WhatsApp" class="md:hidden text-accent-gold-champagne p-2" href="https://wa.me/5515991718631">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</a>
+</div>
+</div>
+</header>
+<!-- ==================== HERO SECTION (Apple Keynote Aesthetic) ==================== -->
+<section class="relative pt-16 md:pt-28 pb-20 md:pb-32 overflow-hidden">
+<!-- Atmospheric Ambient Lasers & Architectural Glows -->
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] md:w-[1100px] h-[550px] bg-gradient-to-b from-accent-gold-core/10 via-primary/5 to-transparent rounded-full blur-[140px] pointer-events-none -z-10"></div>
+<div class="absolute top-1/3 -right-48 w-96 h-96 bg-primary/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+<div class="max-w-7xl mx-auto px-6 md:px-space-xl text-center flex flex-col items-center">
+<!-- Eyebrow Badge Pill -->
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-elevated border border-hairline-border text-accent-gold-champagne font-label-caps text-label-caps tracking-widest uppercase mb-8 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-accent-gold-core animate-pulse"></span>
+        CONSTRUÇÃO CIVIL DE ALTO PADRÃO • SOROCABA E REGIÃO
+      </div>
+<!-- Monumental Headline -->
+<h1 class="text-display-hero-mobile md:text-display-hero font-display-hero-mobile md:font-display-hero text-text-primary tracking-tight max-w-5xl mx-auto leading-none mb-8">
+        Construímos com qualidade. <br class="hidden sm:inline"/>
+<span class="gold-gradient-text">Do início ao fim.</span>
+</h1>
+<!-- Architectural Editorial Subtitle -->
+<p class="text-body-md md:text-body-lg font-body-md md:font-body-lg text-text-secondary max-w-3xl mx-auto leading-relaxed mb-12">
+        Da fundação ao acabamento milimétrico, a MELARE executa sua obra com rigor técnico, pontualidade, segurança e atenção a cada detalhe estrutural.
+      </p>
+<!-- Action Cluster -->
+<div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-20">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-accent-gold-core text-surface-canvas font-label-md text-label-md font-bold tracking-wide hover:bg-accent-gold-rich hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] active:scale-[0.98] transition-all duration-200" href="https://wa.me/5515991718631?text=Olá%2C%20vim%20pelo%20site%20da%20MELARE" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]" data-icon="forum">forum</span>
+          Falar no WhatsApp
+        </a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-surface-overlay border border-hairline-border text-text-primary font-label-md text-label-md font-medium hover:border-accent-gold-core/50 hover:text-accent-gold-champagne active:scale-[0.98] transition-all duration-200" href="#servicos">
+          Explorar Serviços
+          <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Hero Architectural Showcase Backdrop (Editorial Slab) -->
+<div class="w-full max-w-5xl rounded-2xl p-1 bg-gradient-to-b from-hairline-border via-hairline-border/40 to-transparent shadow-2xl mb-16">
+<div class="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-xl overflow-hidden bg-surface-elevated">
+<img class="w-full h-full object-cover" data-alt="Cinematic architectural view of a luxury modern residential villa under clear blue sky, displaying clean lines, exposed concrete slabs, expansive black framed glass windows, warm interior lighting, and refined landscape integration in Sorocaba region. Professional architectural photography with ultra-fine contrast and high dynamic range." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx8wTj2F8zeWrFpw56r6E5IO5zsPK8dWy4bS6PtUISX_OUVGCrD8OuZTVD3rJu17UboBLvFpX-cDOFIgwkcVYycmFP_GPAVjATFfJ1RHx4S2G8ChzCMbEmtHSidmnJMY8YpQ5rYV5uVEdmvsdI1LIzAjTSQ4N8eu9ZypNaPizHBVYk2bkKPnxWWb0dEwkFrji_2FZzR9lHCjNfgF_fsENE6cLJ-B6CfrJLBsBiDp8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-canvas via-surface-canvas/20 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 md:bottom-8 md:left-8 flex flex-col md:flex-row md:items-end justify-between gap-4 text-left">
+<div>
+<span class="text-label-caps font-label-caps text-accent-gold-champagne uppercase tracking-widest block mb-1">PROJETO EM DESTAQUE</span>
+<h3 class="text-title-lg md:text-headline-sm font-headline-sm text-text-primary font-semibold">Residência Alphaville Granja Olga • Turnkey</h3>
+</div>
+<div class="flex items-center gap-4 text-text-secondary text-body-sm font-body-sm">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-accent-gold-core"></span> 680 m² Construídos</span>
+<span class="text-hairline-border">|</span>
+<span>Engenharia &amp; Acabamentos Finos</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Credibility Matrix (Apple Style Metric Bar) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 w-full max-w-5xl">
+<div class="bg-surface-elevated/70 border border-hairline-border backdrop-blur-md rounded-xl p-6 text-center hover:border-hairline-subtle transition-colors">
+<div class="text-headline-lg font-headline-lg text-accent-gold-champagne font-bold tracking-tight mb-1">+10 anos</div>
+<p class="text-text-secondary font-body-sm text-body-sm">de experiência sólida em construção</p>
+</div>
+<div class="bg-surface-elevated/70 border border-hairline-border backdrop-blur-md rounded-xl p-6 text-center hover:border-hairline-subtle transition-colors">
+<div class="text-headline-lg font-headline-lg text-text-primary font-bold tracking-tight mb-1">100%</div>
+<p class="text-text-secondary font-body-sm text-body-sm">compromisso com cada obra e cronograma</p>
+</div>
+<div class="bg-surface-elevated/70 border border-hairline-border backdrop-blur-md rounded-xl p-6 text-center hover:border-hairline-subtle transition-colors">
+<div class="text-headline-lg font-headline-lg text-accent-gold-champagne font-bold tracking-tight mb-1">Sorocaba</div>
+<p class="text-text-secondary font-body-sm text-body-sm">e cidades selecionadas da região metropolitana</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== TIMELINE DE ENGENHARIA: DO INÍCIO À ENTREGA ==================== -->
+<section class="py-24 md:py-36 bg-surface-canvas relative border-t border-hairline-border" id="etapas">
+<div class="max-w-7xl mx-auto px-6 md:px-space-xl">
+<!-- Section Header -->
+<div class="text-center max-w-3xl mx-auto mb-16 md:mb-24">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-elevated border border-hairline-border text-accent-gold-champagne font-label-caps text-label-caps tracking-widest uppercase mb-4">
+          DO INÍCIO À ENTREGA
+        </div>
+<h2 class="text-headline-lg-mobile md:text-headline-xl font-headline-xl text-text-primary tracking-tight mb-6">
+          Veja uma obra ganhar forma.
+        </h2>
+<p class="text-text-secondary text-body-md md:text-body-lg font-body-md md:font-body-lg leading-relaxed">
+          Acompanhamos cada etapa da construção com organização milimétrica e cuidado incondicional, da estrutura primordial ao acabamento de alto padrão.
+        </p>
+</div>
+<!-- 3-Phase Engineering Rail -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+<!-- Step 01: Início -->
+<div class="hairline-card rounded-2xl bg-surface-elevated overflow-hidden flex flex-col group">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Construction site in Brazil showing concrete foundation preparation, heavy wooden formworks, steel rebar reinforcement cages, and precise structural earth stabilization under overcast daylight. Realistic civil engineering progress photography with dark slate textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHREiasa9CojTknAKbbyGP9pTj8vdqnfHV5mH3q7Qt8HG3YjfgnfespeiIYAFL0dtV9N5wwcU35dTkFSuKb2382PxW2NdL5DdFxJfkjnT7BfPHHQHCyXX6IS3Ei-VnwXf9DsVPFl2yRQ1Aggw5ye3CiOh-lmmSDa_wUNBILBJeHtR78GYy6FeQ5ITrMDDnKdiwWHwrRsbNgL0Vd62liDilXE3pq1iolrvBNelFUIc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-elevated via-transparent to-transparent"></div>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-surface-canvas/80 backdrop-blur-md border border-hairline-border text-accent-gold-champagne text-label-caps font-label-caps uppercase tracking-wider">01 • Início</span>
+</div>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-title-lg font-headline-sm text-text-primary font-semibold mb-3 group-hover:text-primary transition-colors">
+                Estrutura e preparação
+              </h3>
+<p class="text-text-secondary text-body-md font-body-md leading-relaxed mb-6">
+                Execução das formas, escoramentos e elementos estruturais que dão base e segurança à construção. Fundação testada e calculada para durabilidade secular.
+              </p>
+</div>
+<div class="pt-4 border-t border-hairline-border flex items-center justify-between text-body-sm font-body-sm text-text-muted">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-accent-gold-core" data-icon="foundation">foundation</span>
+                Sapatas &amp; Vigas Baldrame
+              </span>
+<span class="text-accent-gold-champagne font-semibold font-label-caps text-label-caps">FASE 1</span>
+</div>
+</div>
+</div>
+<!-- Step 02: Execução -->
+<div class="hairline-card rounded-2xl bg-surface-elevated overflow-hidden flex flex-col group relative">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern concrete house under active construction, showing precision clay block masonry walls, poured concrete upper slabs, sleek modern cantilever geometry, and structural roofing work under bright natural lighting in Brazil. Architectural construction site photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH5dhTM25wx9Kd_43LT1jOkR7JckDnKluzNSEVZ-X6ac-33k60Wy_7GfrIU4xQw8CFj_cs-O3FwqQfkdLUxuaaMyWBdH0XAHaNgCgZghK0jHFiY5DiuZJ3yclhli3aI7dQ_P1pFUYL1YvbQQR5PV7jQH4t6cMrNyjkUmwYUYFfn6UBSPdWaPPGV4sUfA3GomXQDoVp7g6gHdCP920EKcg_q9KBLy4-J-1SdV7pBGE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-elevated via-transparent to-transparent"></div>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-surface-canvas/80 backdrop-blur-md border border-accent-gold-core/40 text-accent-gold-champagne text-label-caps font-label-caps uppercase tracking-wider">02 • Execução</span>
+</div>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-title-lg font-headline-sm text-text-primary font-semibold mb-3 group-hover:text-primary transition-colors">
+                Estrutura e alvenaria
+              </h3>
+<p class="text-text-secondary text-body-md font-body-md leading-relaxed mb-6">
+                A obra evolui com concreto, cobertura e fechamento das paredes, preparando cada ambiente para as tubulações hidráulicas, elétricas e revestimentos.
+              </p>
+</div>
+<div class="pt-4 border-t border-hairline-border flex items-center justify-between text-body-sm font-body-sm text-text-muted">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-accent-gold-core" data-icon="construction">construction</span>
+                Lajes &amp; Alvenaria Armada
+              </span>
+<span class="text-accent-gold-champagne font-semibold font-label-caps text-label-caps">FASE 2</span>
+</div>
+</div>
+</div>
+<!-- Step 03: Obra Concluída -->
+<div class="hairline-card rounded-2xl bg-surface-elevated overflow-hidden flex flex-col group">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Completed architectural luxury contemporary home with high ceilings, dark timber warm ceiling eaves, dark aluminium floor-to-ceiling glass facades, pristine landscaping steps, and polished stone finishes. Golden hour lighting highlighting the finished architecture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe8xwa6yIAyCAdvKrxIp-CCFNU_TCEAtArw8GRrT93RYxFq_flMIgNXO282geeTOZFyQQi9EEYn_crtDChbi9TNKkrl8REUKs_hqq5MxjODwRL6Lbs8mMXrDLifpWRzc-QXiugHVEEO1wdnU8FaGm1kPstvkzN0ZmHq9D8piCyzcFai5e9mUY9BYiUXj2rz6fg7lOQQ3rlez55IQIGxggKFQ3kefQ7LBMOw8oXlJM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-elevated via-transparent to-transparent"></div>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-surface-canvas/80 backdrop-blur-md border border-hairline-border text-primary text-label-caps font-label-caps uppercase tracking-wider">03 • Final</span>
+</div>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-title-lg font-headline-sm text-text-primary font-semibold mb-3 group-hover:text-primary transition-colors">
+                Obra concluída
+              </h3>
+<p class="text-text-secondary text-body-md font-body-md leading-relaxed mb-6">
+                O resultado final: fachada contemporânea, esquadrias nobres instaladas e acabamento impecável que transforma seu projeto arquitetônico em realidade pronta para morar.
+              </p>
+</div>
+<div class="pt-4 border-t border-hairline-border flex items-center justify-between text-body-sm font-body-sm text-text-muted">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-accent-gold-core" data-icon="key">key</span>
+                Entrega Turnkey Impecável
+              </span>
+<span class="text-primary font-semibold font-label-caps text-label-caps">ENTREGA</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== BENTO GRID: SOLUÇÕES E SERVIÇOS MELARE ==================== -->
+<section class="py-24 md:py-36 bg-surface-dim relative" id="servicos">
+<div class="max-w-7xl mx-auto px-6 md:px-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<span class="text-label-caps font-label-caps text-accent-gold-champagne tracking-widest uppercase block mb-3">O QUE FAZEMOS</span>
+<h2 class="text-headline-lg-mobile md:text-headline-xl font-headline-xl text-text-primary tracking-tight">
+            Soluções completas para sua obra
+          </h2>
+</div>
+<p class="text-text-secondary font-body-md text-body-md max-w-md">
+          Serviços integrados para construção residencial e corporativa de alto escalão, com acompanhamento técnico cuidadoso em todas as etapas.
+        </p>
+</div>
+<!-- Apple Bento Grid Layout (Modular & Asymmetrical) -->
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<!-- Bento Item 1: Fundações e Estruturas (Large 2-col) -->
+<div class="md:col-span-2 hairline-card bg-surface-elevated rounded-2xl p-8 md:p-10 flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-10 -bottom-10 w-64 h-64 bg-accent-gold-core/5 rounded-full blur-3xl pointer-events-none"></div>
+<div>
+<div class="w-14 h-14 rounded-xl bg-surface-container border border-hairline-border flex items-center justify-center text-accent-gold-champagne mb-8 group-hover:border-accent-gold-core transition-colors">
+<span class="material-symbols-outlined text-[28px]" data-icon="architecture">architecture</span>
+</div>
+<span class="text-label-caps font-label-caps text-accent-gold-champagne tracking-widest uppercase block mb-2">ENGENHARIA ESTRUTURAL</span>
+<h3 class="text-headline-md font-headline-md text-text-primary font-semibold mb-4">
+              Fundações e estruturas
+            </h3>
+<p class="text-text-secondary text-body-md font-body-md leading-relaxed max-w-xl mb-6">
+              Fundações profundas, formas milimétricas, armações técnicas de ferro, vigas, pilares e estruturas de concreto armado executadas com extremo rigor de engenharia e segurança estrita.
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-6 border-t border-hairline-border/60 text-text-muted text-body-sm font-body-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-gold-core"></span>
+            Cálculo de cargas • Concreto usinado certificado • NBR compliant
+          </div>
+</div>
+<!-- Bento Item 2: Alvenaria -->
+<div class="hairline-card bg-surface-elevated rounded-2xl p-8 flex flex-col justify-between group">
+<div>
+<div class="w-14 h-14 rounded-xl bg-surface-container border border-hairline-border flex items-center justify-center text-accent-gold-champagne mb-8 group-hover:border-accent-gold-core transition-colors">
+<span class="material-symbols-outlined text-[28px]" data-icon="grid_view">grid_view</span>
+</div>
+<span class="text-label-caps font-label-caps text-accent-gold-champagne tracking-widest uppercase block mb-2">VEDAÇÃO E PRUMO</span>
+<h3 class="text-title-lg font-headline-sm text-text-primary font-semibold mb-3">
+              Alvenaria
+            </h3>
+<p class="text-text-secondary text-body-md font-body-md leading-relaxed">
+              Levantamento de paredes, muros de contenção, divisórias e demais etapas de vedação com esquadro e prumo impecáveis.
+            </p>
+</div>
+<div class="pt-6 border-t border-hairline-border/60 text-text-muted text-body-sm font-body-sm">
+            Técnica &amp; isolamento acústico
+          </div>
+</div>
+<!-- Bento Item 3: Construção Completa Turnkey (Tall Card) -->
+<div class="hairline-card bg-surface-elevated rounded-2xl p-8 flex flex-col justify-between group relative lg:row-span-2 bg-gradient-to-b from-surface-elevated via-surface-elevated to-surface-container-lowest">
+<div>
+<div class="w-14 h-14 rounded-xl bg-accent-gold-core/10 border border-accent-gold-core/30 flex items-center justify-center text-accent-gold-champagne mb-8">
+<span class="material-symbols-outlined text-[28px]" data-icon="villa">villa</span>
+</div>
+<div class="inline-block px-2.5 py-1 rounded bg-accent-gold-core/20 text-accent-gold-champagne text-label-caps font-label-caps uppercase tracking-wider mb-3">
+              CHAVE NA MÃO
+            </div>
+<h3 class="text-headline-sm font-headline-sm text-text-primary font-semibold mb-4">
+              Construção completa
+            </h3>
+<p class="text-text-secondary text-body-md font-body-md leading-relaxed mb-6">
+              Execução da obra desde a demarcação das primeiras estacas até o brinde de entrega das chaves. Organização absoluta, prestação de contas periódica e acompanhamento transparente.
+            </p>
+<ul class="space-y-3 text-body-sm font-body-sm text-text-secondary">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-accent-gold-core" data-icon="check_circle">check_circle</span>
+                Gestão total de cronograma
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-accent-gold-core" data-icon="check_circle">check_circle</span>
+                Controle diário de insumos
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-accent-gold-core" data-icon="check_circle">check_circle</span>
+                Tranquilidade para a família
+              </li>
+</ul>
+</div>
+<div class="mt-8 pt-6 border-t border-hairline-border">
+<a class="text-accent-gold-champagne font-label-md text-label-md inline-flex items-center gap-1.5 hover:translate-x-1 transition-transform" href="https://wa.me/5515991718631">
+              Falar sobre seu projeto <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Bento Item 4: Reformas -->
+<div class="hairline-card bg-surface-elevated rounded-2xl p-8 flex flex-col justify-between group">
+<div>
+<div class="w-14 h-14 rounded-xl bg-surface-container border border-hairline-border flex items-center justify-center text-accent-gold-champagne mb-8 group-hover:border-accent-gold-core transition-colors">
+<span class="material-symbols-outlined text-[28px]" data-icon="handyman">handyman</span>
+</div>
+<span class="text-label-caps font-label-caps text-accent-gold-champagne tracking-widest uppercase block mb-2">REVITALIZAÇÃO</span>
+<h3 class="text-title-lg font-headline-sm text-text-primary font-semibold mb-3">
+              Reformas
+            </h3>
+<p class="text-text-secondary text-body-md font-body-md leading-relaxed">
+              Reformas residenciais e comerciais, ampliações inteligentes, adequações estruturais e modernização completa de ambientes corporativos.
+            </p>
+</div>
+<div class="pt-6 border-t border-hairline-border/60 text-text-muted text-body-sm font-body-sm">
+            Mínimo impacto na rotina
+          </div>
+</div>
+<!-- Bento Item 5: Acabamentos Finos -->
+<div class="hairline-card bg-surface-elevated rounded-2xl p-8 flex flex-col justify-between group">
+<div>
+<div class="w-14 h-14 rounded-xl bg-surface-container border border-hairline-border flex items-center justify-center text-accent-gold-champagne mb-8 group-hover:border-accent-gold-core transition-colors">
+<span class="material-symbols-outlined text-[28px]" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<span class="text-label-caps font-label-caps text-accent-gold-champagne tracking-widest uppercase block mb-2">PRECISÃO VISUAL</span>
+<h3 class="text-title-lg font-headline-sm text-text-primary font-semibold mb-3">
+              Acabamentos
+            </h3>
+<p class="text-text-secondary text-body-md font-body-md leading-relaxed">
+              Assentamento de porcelanatos em grandes formatos, pisos nobres, pintura técnica e serviços de acabamento para entregar sofisticação estética inquestionável.
+            </p>
+</div>
+<div class="pt-6 border-t border-hairline-border/60 text-text-muted text-body-sm font-body-sm">
+            Nivelamento a laser
+          </div>
+</div>
+<!-- Bento Item 6: Organização da Obra -->
+<div class="hairline-card bg-surface-elevated rounded-2xl p-8 flex flex-col justify-between group">
+<div>
+<div class="w-14 h-14 rounded-xl bg-surface-container border border-hairline-border flex items-center justify-center text-accent-gold-champagne mb-8 group-hover:border-accent-gold-core transition-colors">
+<span class="material-symbols-outlined text-[28px]" data-icon="straighten">straighten</span>
+</div>
+<span class="text-label-caps font-label-caps text-accent-gold-champagne tracking-widest uppercase block mb-2">GESTÃO TÉCNICA</span>
+<h3 class="text-title-lg font-headline-sm text-text-primary font-semibold mb-3">
+              Organização da obra
+            </h3>
+<p class="text-text-secondary text-body-md font-body-md leading-relaxed">
+              Planejamento de etapas, sincronia de equipes qualificadas e controle de materiais para uma execução mais eficiente, limpa e organizada.
+            </p>
+</div>
+<div class="pt-6 border-t border-hairline-border/60 text-text-muted text-body-sm font-body-sm">
+            Canteiro limpo e seguro
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== DIFERENCIAIS & PILARES DE CONFIANÇA ==================== -->
+<section class="py-24 md:py-36 bg-surface-canvas relative border-t border-hairline-border" id="diferenciais">
+<div class="max-w-7xl mx-auto px-6 md:px-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- Left Column: Editorial Statement -->
+<div class="lg:col-span-5">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-elevated border border-hairline-border text-accent-gold-champagne font-label-caps text-label-caps tracking-widest uppercase mb-6">
+            MELARE CONSTRUÇÃO CIVIL
+          </div>
+<h2 class="text-headline-lg-mobile md:text-headline-xl font-headline-xl text-text-primary tracking-tight leading-tight mb-6">
+            Construímos confiança junto com cada obra.
+          </h2>
+<p class="text-text-secondary text-body-lg font-body-lg leading-relaxed mb-8">
+            A MELARE atende Sorocaba e região com foco em construção civil de alta qualidade. Trabalhamos para que cada cliente tenha clareza, previsibilidade orçamentária e total tranquilidade durante a execução do serviço.
+          </p>
+<div class="space-y-4 mb-10">
+<div class="flex items-start gap-3.5">
+<div class="w-6 h-6 rounded-full bg-accent-gold-core/20 flex items-center justify-center text-accent-gold-champagne shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]" data-icon="check">check</span>
+</div>
+<span class="text-text-primary font-body-md text-body-md">Planejamento e acompanhamento detalhado</span>
+</div>
+<div class="flex items-start gap-3.5">
+<div class="w-6 h-6 rounded-full bg-accent-gold-core/20 flex items-center justify-center text-accent-gold-champagne shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]" data-icon="check">check</span>
+</div>
+<span class="text-text-primary font-body-md text-body-md">Equipe identificada, uniformizada e organizada</span>
+</div>
+<div class="flex items-start gap-3.5">
+<div class="w-6 h-6 rounded-full bg-accent-gold-core/20 flex items-center justify-center text-accent-gold-champagne shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]" data-icon="check">check</span>
+</div>
+<span class="text-text-primary font-body-md text-body-md">Segurança rígida e responsabilidade técnica</span>
+</div>
+<div class="flex items-start gap-3.5">
+<div class="w-6 h-6 rounded-full bg-accent-gold-core/20 flex items-center justify-center text-accent-gold-champagne shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]" data-icon="check">check</span>
+</div>
+<span class="text-text-primary font-body-md text-body-md">Compromisso inegociável com qualidade e prazo</span>
+</div>
+</div>
+<!-- Apple Quote Capsule -->
+<div class="p-6 rounded-xl bg-surface-elevated border border-hairline-border border-l-2 border-l-accent-gold-core">
+<div class="text-accent-gold-champagne font-headline-sm font-semibold tracking-tight text-title-lg mb-1">MELARE</div>
+<p class="text-text-muted text-body-md font-body-md italic">"Sonhos que se tornam obras."</p>
+</div>
+</div>
+<!-- Right Column: 4 Technical Pillars Matrix -->
+<div class="lg:col-span-7">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<!-- Pillar 01 -->
+<div class="hairline-card bg-surface-elevated rounded-2xl p-8 flex flex-col justify-between">
+<div>
+<div class="text-accent-gold-champagne text-headline-xl font-headline-xl font-extrabold mb-4 opacity-80">01</div>
+<h3 class="text-title-lg font-headline-sm text-text-primary font-semibold mb-2">
+                  Organização
+                </h3>
+<p class="text-text-secondary text-body-md font-body-md leading-relaxed">
+                  Etapas planejadas para manter o serviço bem conduzido, sem improvisos e com cronograma transparente.
+                </p>
+</div>
+<div class="mt-6 pt-4 border-t border-hairline-border/50 text-label-caps font-label-caps text-text-muted uppercase">
+                Metodologia Estruturada
+              </div>
+</div>
+<!-- Pillar 02 -->
+<div class="hairline-card bg-surface-elevated rounded-2xl p-8 flex flex-col justify-between">
+<div>
+<div class="text-accent-gold-champagne text-headline-xl font-headline-xl font-extrabold mb-4 opacity-80">02</div>
+<h3 class="text-title-lg font-headline-sm text-text-primary font-semibold mb-2">
+                  Qualidade
+                </h3>
+<p class="text-text-secondary text-body-md font-body-md leading-relaxed">
+                  Cuidado obsessivo com execução técnica, materiais de primeira linha e alinhamento milimétrico de acabamento.
+                </p>
+</div>
+<div class="mt-6 pt-4 border-t border-hairline-border/50 text-label-caps font-label-caps text-text-muted uppercase">
+                Rigor de Engenharia
+              </div>
+</div>
+<!-- Pillar 03 -->
+<div class="hairline-card bg-surface-elevated rounded-2xl p-8 flex flex-col justify-between">
+<div>
+<div class="text-accent-gold-champagne text-headline-xl font-headline-xl font-extrabold mb-4 opacity-80">03</div>
+<h3 class="text-title-lg font-headline-sm text-text-primary font-semibold mb-2">
+                  Segurança
+                </h3>
+<p class="text-text-secondary text-body-md font-body-md leading-relaxed">
+                  Equipe preparada, uso de EPIs completos e estrita atenção às normas regulamentadoras e boas práticas na obra.
+                </p>
+</div>
+<div class="mt-6 pt-4 border-t border-hairline-border/50 text-label-caps font-label-caps text-text-muted uppercase">
+                Zero Acidentes
+              </div>
+</div>
+<!-- Pillar 04 -->
+<div class="hairline-card bg-surface-elevated rounded-2xl p-8 flex flex-col justify-between">
+<div>
+<div class="text-accent-gold-champagne text-headline-xl font-headline-xl font-extrabold mb-4 opacity-80">04</div>
+<h3 class="text-title-lg font-headline-sm text-text-primary font-semibold mb-2">
+                  Compromisso
+                </h3>
+<p class="text-text-secondary text-body-md font-body-md leading-relaxed">
+                  Comunicação clara contínua, canal direto com a liderança e responsabilidade total com o investimento do cliente.
+                </p>
+</div>
+<div class="mt-6 pt-4 border-t border-hairline-border/50 text-label-caps font-label-caps text-text-muted uppercase">
+                Transparência Total
+              </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== CALL TO ACTION BANNER (Keynote Closing Punch) ==================== -->
+<section class="py-20 md:py-28 relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 md:px-space-xl">
+<div class="relative rounded-3xl p-8 md:p-16 overflow-hidden bg-gradient-to-br from-[#1C1A14] via-[#121316] to-surface-canvas border border-accent-gold-core/40 shadow-2xl">
+<!-- Ambient Gold Backlight -->
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-accent-gold-core/15 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-10">
+<div class="max-w-2xl">
+<span class="text-label-caps font-label-caps text-accent-gold-champagne tracking-widest uppercase block mb-3">CONSULTORIA TÉCNICA IMEDIATA</span>
+<h2 class="text-headline-lg-mobile md:text-headline-xl font-headline-xl text-text-primary font-bold tracking-tight mb-4">
+              Tem uma obra ou reforma em mente?
+            </h2>
+<p class="text-text-secondary text-body-md md:text-body-lg font-body-md md:font-body-lg leading-relaxed">
+              Conte para a MELARE o que você precisa. Fale diretamente pelo WhatsApp com nossos especialistas e solicite seu orçamento sem compromisso.
+            </p>
+</div>
+<div class="shrink-0 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+<a class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-accent-gold-core text-surface-canvas font-label-md text-label-md font-bold tracking-wide hover:bg-accent-gold-rich hover:shadow-[0_0_35px_rgba(212,175,55,0.45)] active:scale-[0.98] transition-all duration-200" href="https://wa.me/5515991718631?text=Olá%2C%20vim%20pelo%20site%20da%20MELARE%20e%20gostaria%20de%20solicitar%20um%20orçamento." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[22px]" data-icon="chat">chat</span>
+              Falar com a MELARE
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== CONTATO DIRETO & CANAIS ==================== -->
+<section class="py-20 md:py-28 bg-surface-canvas relative border-t border-hairline-border" id="contato">
+<div class="max-w-7xl mx-auto px-6 md:px-space-xl">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-label-caps font-label-caps text-accent-gold-champagne tracking-widest uppercase block mb-2">CONTATO</span>
+<h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-text-primary tracking-tight mb-4">
+          Vamos conversar sobre sua obra?
+        </h2>
+<p class="text-text-secondary text-body-md font-body-md">
+          Atendimento personalizado para Sorocaba e região. Envie uma mensagem e apresente sua planta ou ideia.
+        </p>
+</div>
+<!-- Contact Hub Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+<!-- WhatsApp Direct -->
+<a class="hairline-card bg-surface-elevated rounded-2xl p-8 flex items-center gap-5 group" href="https://wa.me/5515991718631?text=Olá%2C%20vim%20pelo%20site%20da%20MELARE" rel="noopener noreferrer" target="_blank">
+<div class="w-14 h-14 rounded-xl bg-surface-container border border-hairline-border flex items-center justify-center text-accent-gold-champagne group-hover:bg-accent-gold-core group-hover:text-surface-canvas transition-all shrink-0">
+<span class="material-symbols-outlined text-[26px]" data-icon="phone_iphone">phone_iphone</span>
+</div>
+<div>
+<span class="text-label-caps font-label-caps text-text-muted uppercase tracking-wider block">WHATSAPP</span>
+<span class="text-title-lg font-title-lg text-text-primary font-semibold group-hover:text-primary transition-colors block">(15) 99171-8631</span>
+<span class="text-body-sm font-body-sm text-accent-gold-champagne mt-0.5 block">Iniciar conversa →</span>
+</div>
+</a>
+<!-- Instagram Direct -->
+<a class="hairline-card bg-surface-elevated rounded-2xl p-8 flex items-center gap-5 group" href="https://www.instagram.com/melareconstrutora" rel="noopener noreferrer" target="_blank">
+<div class="w-14 h-14 rounded-xl bg-surface-container border border-hairline-border flex items-center justify-center text-accent-gold-champagne group-hover:bg-accent-gold-core group-hover:text-surface-canvas transition-all shrink-0">
+<span class="material-symbols-outlined text-[26px]" data-icon="photo_camera">photo_camera</span>
+</div>
+<div>
+<span class="text-label-caps font-label-caps text-text-muted uppercase tracking-wider block">INSTAGRAM</span>
+<span class="text-title-lg font-title-lg text-text-primary font-semibold group-hover:text-primary transition-colors block">@melareconstrutora</span>
+<span class="text-body-sm font-body-sm text-accent-gold-champagne mt-0.5 block">Ver fotos das obras →</span>
+</div>
+</a>
+<!-- Area de Atendimento -->
+<div class="hairline-card bg-surface-elevated rounded-2xl p-8 flex items-center gap-5">
+<div class="w-14 h-14 rounded-xl bg-surface-container border border-hairline-border flex items-center justify-center text-accent-gold-champagne shrink-0">
+<span class="material-symbols-outlined text-[26px]" data-icon="location_on">location_on</span>
+</div>
+<div>
+<span class="text-label-caps font-label-caps text-text-muted uppercase tracking-wider block">ÁREA DE ATENDIMENTO</span>
+<span class="text-title-lg font-title-lg text-text-primary font-semibold block">Sorocaba e região — SP</span>
+<span class="text-body-sm font-body-sm text-text-secondary mt-0.5 block">Votorantim, Itu, Salto e adjacências</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SHARED COMPONENT: Footer ==================== -->
+<footer class="docked full-width bottom bg-surface-canvas dark:bg-surface-canvas border-t border-hairline-border dark:border-hairline-border">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-space-xl py-space-xl max-w-7xl mx-auto gap-space-md">
+<!-- Brand & Copyright -->
+<div class="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
+<a class="text-headline-sm font-headline-sm font-bold tracking-tight text-text-primary dark:text-text-primary" href="#">
+          MELARE
+        </a>
+<span class="hidden md:inline text-hairline-border">|</span>
+<p class="text-body-sm font-body-sm text-text-muted dark:text-text-muted">
+          © 2025 MELARE Construção Civil. Todos os direitos reservados. Sorocaba e região.
+        </p>
+</div>
+<!-- Footer Navigation Links (Exact strings from JSON) -->
+<div class="flex flex-wrap items-center justify-center gap-6">
+<a class="text-text-muted dark:text-text-muted transition-colors hover:text-primary dark:hover:text-primary hover:translate-x-0.5 transition-transform duration-150 text-label-caps font-label-caps uppercase" href="#empresa">Empresa</a>
+<a class="text-text-muted dark:text-text-muted transition-colors hover:text-primary dark:hover:text-primary hover:translate-x-0.5 transition-transform duration-150 text-label-caps font-label-caps uppercase" href="#servicos">Serviços</a>
+<a class="text-text-muted dark:text-text-muted transition-colors hover:text-primary dark:hover:text-primary hover:translate-x-0.5 transition-transform duration-150 text-label-caps font-label-caps uppercase" href="#etapas">Etapas</a>
+<a class="text-text-muted dark:text-text-muted transition-colors hover:text-primary dark:hover:text-primary hover:translate-x-0.5 transition-transform duration-150 text-label-caps font-label-caps uppercase" href="#diferenciais">Diferenciais</a>
+<a class="text-text-muted dark:text-text-muted transition-colors hover:text-primary dark:hover:text-primary hover:translate-x-0.5 transition-transform duration-150 text-label-caps font-label-caps uppercase" href="#contato">Contato</a>
+<a class="text-text-muted dark:text-text-muted transition-colors hover:text-primary dark:hover:text-primary hover:translate-x-0.5 transition-transform duration-150 text-label-caps font-label-caps uppercase" href="https://www.instagram.com/melareconstrutora" rel="noopener noreferrer" target="_blank">Instagram</a>
+</div>
+</div>
+</footer>
+<!-- Floating Mobile WhatsApp Quick Button -->
+<aside class="fixed bottom-6 right-6 z-40 md:hidden">
+<a aria-label="Falar no WhatsApp" class="w-14 h-14 rounded-full bg-accent-gold-core text-surface-canvas shadow-2xl flex items-center justify-center active:scale-95 transition-transform" href="https://wa.me/5515991718631?text=Olá%2C%20vim%20pelo%20site%20da%20MELARE" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[28px]" data-icon="chat">chat</span>
+</a>
+</aside>
+</body></html>

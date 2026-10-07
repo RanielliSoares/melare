@@ -1,0 +1,79 @@
+# ============================================================
+# MELARE Construção Civil — configuração para hospedagem Apache
+# ============================================================
+
+Options -Indexes
+DirectoryIndex index.html
+AddDefaultCharset UTF-8
+
+# ---------- Páginas de erro ----------
+ErrorDocument 404 /404.html
+ErrorDocument 403 /404.html
+ErrorDocument 500 /500.html
+ErrorDocument 503 /500.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Forçar HTTPS — descomente depois que o SSL estiver ativo no painel da hospedagem
+  # RewriteCond %{HTTPS} !=on
+  # RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Forçar "www" (opcional) — descomente e troque pelo domínio real
+  # RewriteCond %{HTTP_HOST} ^seudominio\.com\.br$ [NC]
+  # RewriteRule ^ https://www.seudominio.com.br%{REQUEST_URI} [L,R=301]
+
+  # /index.html -> /
+  RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+  RewriteRule ^index\.html$ / [L,R=301]
+
+  # URLs sem ".html" (ex.: /politica-de-privacidade)
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.+?)/?$ $1.html [L]
+
+  # Bloquear arquivos de desenvolvimento, caso sejam enviados por engano
+  RewriteRule ^(src|scripts|node_modules|dist|_stitch-referencia)(/|$) - [R=404,L]
+  RewriteRule ^(package(-lock)?\.json|tailwind\.config\.js|README\.md)$ - [R=404,L]
+</IfModule>
+
+# Arquivos ocultos (.git, .env etc.)
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
+
+# ---------- Segurança ----------
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# ---------- Compressão ----------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml application/xml
+  AddOutputFilterByType DEFLATE application/javascript text/javascript application/json
+  AddOutputFilterByType DEFLATE application/manifest+json image/svg+xml
+</IfModule>
+
+# ---------- Cache no navegador ----------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType image/webp "access plus 6 months"
+  ExpiresByType image/jpeg "access plus 6 months"
+  ExpiresByType image/png "access plus 6 months"
+  ExpiresByType image/svg+xml "access plus 6 months"
+  ExpiresByType application/manifest+json "access plus 1 week"
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType application/manifest+json .webmanifest
+</IfModule>
